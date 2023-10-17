@@ -1,0 +1,26 @@
+Instructions to create your image of docker for a simple python app
+
+1. Create your Dockerfile, in this file you will write the instructions that you want for your docker image.
+
+2. Make sure your docker is active/running:
+    $ sudo systemctl status docker
+
+3. Build the docker image
+    $ sudo docker build -t <img-name> .
+
+4. Run the docker container from the image:
+    $ docker run <img-name>
+    
+
+If you need to remove/delete a docker image:
+    $ docker rmi <img-name>
+
+
+If there's a container using the image:
+    $ sudo docker stop <container-id>  # Stop the container
+    $ sudo docker rm <container-id>    # Remove the container
+    $ sudo docker rmi -f <img-name>  # Forcefully remove the image
+
+
+To list the images:
+    $ sudo docker images
